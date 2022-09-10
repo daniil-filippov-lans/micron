@@ -1,12 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    reactStrictMode: true,
-    webpack5: true,
-    distDir: 'build',
-    swcMinify: true,
-    webpack: (config, option) => {
+const NextFederationPlugin = require('@module-federation/nextjs-mf/lib/NextFederationPlugin');
+const { dependencies } = require('./package.json');
+
+module.exports = {
+    webpack(config, options) {
+		if (!option)
         config.plugins.push(
-            new option.webpack.container.ModuleFederationPlugin({
+            new options.webpack.container.ModuleFederationPlugin({
                 name: 'chat',
                 filename: 'chatEntry.js',
                 remoteType: 'var',
@@ -31,6 +30,12 @@ const nextConfig = {
 
         return config;
     },
+};
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    reactStrictMode: true,
+    swcMinify: true,
 };
 
 module.exports = nextConfig;
