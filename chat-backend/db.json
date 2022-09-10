@@ -1,0 +1,13 @@
+{
+    "chats": [
+        { "id": 1, "title": "first", "users": 1 },
+        { "id": 2, "title": "sec", "users": 2 },
+        { "id": 3, "title": "free", "users": 1 },
+        { "id": 4, "title": "four", "users": 1 },
+        { "id": 5, "title": "not last", "users": 1 },
+        { "id": 6, "title": "another one", "users": 1 },
+        { "id": 7, "title": "and another one", "users": 1 },
+        { "id": 8, "title": "and another one", "users": 1 },
+        { "id": 9, "title": "and another one", "users": 1 }
+    ]
+}
